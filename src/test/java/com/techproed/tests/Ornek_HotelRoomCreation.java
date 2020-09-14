@@ -34,8 +34,10 @@ public class Ornek_HotelRoomCreation extends TestBase {
         WebElement adultCountKutusu= driver.findElement(By.id("MaxAdultCount"));
         WebElement childCountKutusu= driver.findElement(By.id("MaxChildCount"));
         WebElement saveButonu      = driver.findElement(By.id("btnSubmit"));
+        //Dropdown ==> Select() class
         Select hotelDropdown = new Select(idHotelDropdown);
         hotelDropdown.selectByIndex(2);
+
         codeKutusu.sendKeys("1234");
         nameKutusu.sendKeys("Yılmaz");
         locationKutusu.sendKeys("Selamlar");
@@ -49,6 +51,8 @@ public class Ornek_HotelRoomCreation extends TestBase {
         childCountKutusu.sendKeys("5");
         saveButonu.click();
 
+        WebElement ok = driver.findElement(By.xpath("//button[.='OK']"));
+        ok.click();
 
 
 
