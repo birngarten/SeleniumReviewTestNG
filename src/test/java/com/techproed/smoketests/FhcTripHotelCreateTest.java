@@ -28,7 +28,7 @@ public class FhcTripHotelCreateTest extends TestBase {
 
     @Test
     public void test(){
-        // Tüm webelementlere veri göndermeniz göndermeniz gerekiyor.
+        // Tüm webelementlere veri göndermeniz gerekiyor.
         // Save butonuna tıklamnız gerekiyor.
         // Assert işlemi ile "Hotel was inserted successfully" yazısını doğrulayın
         FhcTripHotelCreatePage fhcTripHotelCreatePage = new FhcTripHotelCreatePage(driver);
