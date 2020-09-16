@@ -18,7 +18,7 @@ public class GlbPantsTest {
 //	Bulduğunuz webelementlerin (yani alt kategorilerin) içerdiği yazıları
 //	ekrana yazdırın.
 
-    @Test
+    @Test (groups = "glbtest")
     public void test(){
         Driver.getDriver().get(ConfigurationReader.getProperty("glb_pantolon"));
         GlbPantsPage glbPantsPage = new GlbPantsPage();

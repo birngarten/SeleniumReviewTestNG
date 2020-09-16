@@ -21,26 +21,20 @@ public class GlbKitTest {
     //	ürünün açıklamasını webelement şeklinde bulun.
     //c ) Bu webelementlerin içerdiği yazıları ekrana yazdırın.
 
-    public Actions actions;
+    @Test (groups = "glbtest")
+    public void test() {
+        Driver.getDriver().get(ConfigurationReader.getProperty("glb_kitchen"));
 
+        GlbKitPage glbKitPage = new GlbKitPage();
 
-        @Test
-        public void test(){
-            Driver.getDriver().get(ConfigurationReader.getProperty("glb_kitchen"));
+        glbKitPage.urunLinki.click();
+        String aciklama = glbKitPage.aciklama.getText();
+        String baslik = glbKitPage.baslik.getText();
+        String fiyat = glbKitPage.fiyat.getText();
 
-            GlbKitPage glbKitPage = new GlbKitPage();
-
-            glbKitPage.urunLinki.click();
-            String aciklama = glbKitPage.aciklama.getText();
-            String baslik   = glbKitPage.baslik.getText();
-            String fiyat    = glbKitPage.fiyat.getText();
-
-            System.out.println(baslik);
-            System.out.println(aciklama);
-            System.out.println(fiyat);
-
-
+        System.out.println(baslik);
+        System.out.println(aciklama);
+        System.out.println(fiyat);
 
     }
-
 }
